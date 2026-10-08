@@ -21,7 +21,7 @@ $senha = $_POST['senha'];
 $sql = "SELECT * FROM usuarios WHERE email = '$email'";
 
 // Executa a consulta e guarda o resultado.
-$resultado = mysqli_query($conexao,$sql);
+$resultado = mysqli_query($conexao, $sql);
 
 // mysqli_fetch_assoc() transforma a linha do resultado 
 // em array associativo

@@ -30,7 +30,7 @@ $resultadoVerificar = mysqli_query($conexao, $sqlVerificar);
 if (mysqli_num_rows($resultadoVerificar) > 0) {
     // Se o email já existe, redireciona de volta ao cadastro
     // com mensagem de erro
-    header("Location: cadastro,php?erro=email");
+    header("Location: cadastro.php?erro=email");
     exit();
 }
 
@@ -47,7 +47,7 @@ $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 // ==========================================================
 
 $sql = "INSERT INTO usuarios (nome, email, senha) VALUES
-('nome', 'email', '$senhaCriptografada')";
+('$nome', '$email', '$senhaCriptografada')";
 
 // Executa o INSERT no banco de dados
 mysqli_query($conexao, $sql);
@@ -56,4 +56,3 @@ mysqli_query($conexao, $sql);
 // bem-sucedido.
 header("Location: login.php");
 exit();
-                                                                      
