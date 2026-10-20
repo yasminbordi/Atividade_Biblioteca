@@ -23,5 +23,5 @@ VALUES ('$titulo', '$autor', '$status')";
 mysqli_query($conexao, $sql);
 
 // Redireciona para listagem de livros após salvar
-header("Location: listar_livros.php");
+header("Location: listar_livro.php");
 exit();
